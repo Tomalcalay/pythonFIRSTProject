@@ -52,6 +52,7 @@ def third_screen(num):
                 num2 = get_user_value()
                 print('your currency is: ')
                 print(num2)
+                results_list.append(num2)
                 answer3 = input('would you like to start over answer: y/n')
                 wrong(answer3)
                 answer2 = ''  # preventing the loop and make sure the loop doesn't enter to infinite loop
