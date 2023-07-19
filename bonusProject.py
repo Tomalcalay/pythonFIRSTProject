@@ -67,7 +67,7 @@ def get_user_value():
             except ValueError:
                 print('Invalid choice.please enter valid amount.')
 
-        return get_user_value()
+            return get_user_value()
     else:  # making sure the user chose 1/2/3 and not enter wrong string
         print('Invalid Choice, please try again.')
         return get_user_value()  # returning the result
@@ -123,7 +123,7 @@ def last_screen(results_list):
     results_file.write(str(results_list))
     import subprocess  # calling the subprocess class to pop our file
     file_path = 'C:/Users/nadav2022/PycharmProjects/pythonFIRSTProject/results_list.txt'
-    subprocess.Popen(['start', file_path],shell=True)
+    subprocess.Popen(['start', file_path], shell=True)
     results_file.close()
     tkinter()  # calling the tkinter function to open a GUI window with our result list
 
@@ -140,7 +140,6 @@ def tkinter():
     label.pack()  # calling the title working
     text_widget = tk.Text(root)
     text_widget.pack(fill=tk.BOTH, expand=True)  # creating our body text
-    text_widget.configure(bg='white')  # making sure the background is colored white. in mac doesn't appear right
     file_contents = file.read()
     text_widget.insert("1.0", '\n' + file_contents)  # adding your text from the file to your window
     root.mainloop()  # calling our GUI window
