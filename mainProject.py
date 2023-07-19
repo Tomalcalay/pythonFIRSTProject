@@ -1,7 +1,7 @@
 def main():
     print('Welcome to our currency converter ')  # print our first screen
     third_screen(get_user_value())
-    #calling all the functions. third_screen contain the last_screen function
+    # #calling all the functions. third_screen contain the last_screen function
 
 
 def get_user_value():
@@ -10,10 +10,10 @@ def get_user_value():
     print('Please choose an option (1/2): ')
     user_answer = input('1. Dollars to Shekels''\n2. Shekels to Dollars''\n')  # let the user chose currency option
     if user_answer == '1':  # checking which option the user chose
-        while True:  #making sure the user chose a valid answer
+        while True:  # #making sure the user chose a valid answer
             try:
                 value_to_convert = float(input('how much would you like to convert'))
-                while value_to_convert < 0:  #making sure the user didn't choose a negative number.
+                while value_to_convert < 0:  # #making sure the user didn't choose a negative number.
                     print('Invalid choice,please enter a positive number')
                     value_to_convert = float(input('please enter amount again'))
                 return USD.calculate(value_to_convert)
@@ -41,6 +41,7 @@ def third_screen(num):
     results_list = ['this is all of your conversion:']
     results_list.append(num)
     first_answer = input('would you like to start over answer: y/n')
+
     def wrong(answer2):  # function that check the user answer and let the user start again the currency calculator
         while answer2 not in {'y', "Y", 'yes', 'YES'} and answer2 not in {'n', 'N', 'no', 'NO'}:
             # making sure the user enter the right string
@@ -61,6 +62,7 @@ def third_screen(num):
                 break  # stopping the loop
     wrong(first_answer)
     return results_list
+
 
 def last_screen(results_list):
     print('Thanks for using our currency converter.')

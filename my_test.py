@@ -1,7 +1,8 @@
 import unittest
 import mainProject
 
-class testadd(unittest.TestCase):
+
+class Testadd(unittest.TestCase):
     def test_value(self):
         from mainProject import get_user_value
         assert get_user_value()
@@ -10,6 +11,7 @@ class testadd(unittest.TestCase):
         import projectClassILS
         result = projectClassILS.ILS.calculate(5)
         assert result == 1.4000000000000001
+
 
     def test_file(self):
         list_results = mainProject.third_screen(5)
